@@ -1,7 +1,16 @@
 /* Main CSS */
 
-body {;
+html {
+  height:100%;
+}
+
+body {
+  min-height: 100%;
   background-color: grey;
+}
+
+section.content {
+  min-height: 100%;
 }
 
 div.mainpage {
@@ -10,7 +19,15 @@ div.mainpage {
   max-width: 1000px;
   background-color: white;
   padding: 10px;
-  overflow:auto; 
+  overflow:auto;
+}
+
+div.fill {
+  height: 100vh;
+}
+
+p.pagetext {
+   text-align:justify;
 }
 
 /* Menu CSS */

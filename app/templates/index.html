@@ -8,9 +8,7 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='style_home.css') }}">
 </head>
 
-<section class="content">
-  <header>
-  </header>
+<!-- <section class="content"> -->
   <body>
   <div class=mainpage>
   {% include "upper_title.html" %}
@@ -29,8 +27,8 @@
      <li><a href="#">Catalan</a></li>
     </ul>
   </li> -->
-   <li><a href="#">About</a></li>
-   <li><a href="#">Contact Us</a></li>
+   <li><a href="about.html">About</a></li>
+   <li><a href="contact.html">Contact Us</a></li>
   </ul>
 
   {% if page == "/index.html" or page == "/" %}
@@ -43,6 +41,12 @@
     {% include "products.html" %}
     {% endwith %}
   {% endif %}
+  {% if page == "/about.html" %}
+    {% include "about.html" %}
+  {% endif %}
+  {% if page == "/contact.html" %}
+    {% include "contact.html" %}
+  {% endif %}
   </body>
 </div>
-</section>
+<!-- </section> -->
