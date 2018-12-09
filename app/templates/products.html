@@ -1,0 +1,12 @@
+{% for product in filenames %}
+<div class="gallery">
+  <div class="topd">
+    <a target="_blank" href="static/images/Peces/{{product[0]}}{{product[1]}}">
+      <img src="static/images/Peces/{{product[0]}}{{product[1]}}" alt="{{product[0]}}" width="600" height="auto">
+    </a>
+  </div>
+  <div class="botd">
+    <div class="desc">{{product[0]}}</div>
+  </div>
+</div>
+{% endfor %}

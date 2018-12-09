@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Torrent Textil</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style_products.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style_home.css') }}">
+</head>
+
+<section class="content">
+  <header>
+  </header>
+  <body>
+  <div class=mainpage>
+  {% include "upper_title.html" %}
+
+  <ul id="menu-bar">
+   <li class="active"><a href="index.html">Home</a></li>
+   <li><a href="#">Products</a>
+    <ul>
+     <li><a href="products.html">Product Browser</a></li>
+    </ul>
+   </li>
+   <!-- <li><a href="#">Language</a>
+    <ul>
+     <li><a href="#">English</a></li>
+     <li><a href="#">Spanish</a></li>
+     <li><a href="#">Catalan</a></li>
+    </ul>
+  </li> -->
+   <li><a href="#">About</a></li>
+   <li><a href="#">Contact Us</a></li>
+  </ul>
+
+  {% if page == "/index.html" or page == "/" %}
+    {% with filenames=filenames %}
+    {% include "home.html" %}
+    {% endwith %}
+  {% endif %}
+  {% if page == "/products.html" %}
+    {% with filenames=filenames %}
+    {% include "products.html" %}
+    {% endwith %}
+  {% endif %}
+  </body>
+</div>
+</section>
